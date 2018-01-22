@@ -1,0 +1,17 @@
+<p>welcomw to planet page</p>
+<div>
+    <table class="table">
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+         </tr>
+            <tr *ngFor='let planet of world; let i = index ' routerLink="/planetdetail" (click)="planetDetail(planet)">
+             <!-- <td><img [src]='planet.image'></td> -->
+             <td><p>{{planet.name}}</p></td>
+             <p>{{planet.caption}}</p>
+          </tr>
+        </table>
+
+
+
+</div>

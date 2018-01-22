@@ -1,0 +1,66 @@
+<!--<div [hidden]="abc" class="modal">
+  <br>
+  <input #id placeholder="id"><br>
+  <input #name placeholder="name"><br>
+  <input #sub placeholder="sub"><br>
+  <input #age placeholder="Age"><br>
+  <button (click)="showConfirm()"> Add Contact</button>
+
+  <div [hidden]="letsee">
+  Are you sure you want to add the contact?
+  <button (click)="okbtnchild(id.value)"> ok </button>
+  <button (click)="cancelbtn()" [hidden]="cancel"> cancel </button>
+  </div> -->
+
+<div [hidden]="visible">
+<form>
+ID:<input type="text" #id><br>
+Name:<input type="text" #fname><br>
+Subject:<input type="text" #lname><br>
+Age:<input type="text" #sub><br>
+
+</form>
+</div>
+
+<table>
+
+
+<tr>
+    <th>id</th>
+  <th>Fname</th>
+  <th>Lastname</th>
+  <th>subject</th>
+  
+  </tr>
+  
+  <tr *ngFor="let f of detailsofformtable ; let i=index ">
+  <td>
+    {{f.id}}
+  </td>
+    <td>
+  {{f.fname}}
+  </td>
+     <td>
+    {{f.lname}}
+    </td>
+    <td>
+    {{f.sub}}
+  
+  </td>
+  <td>
+    <button> delete </button>
+  </td>
+  
+  </tr>
+</table>
+<button (click) = "showdiv()" >Add Contact </button>
+
+<div [hidden]="abc" class="modal">
+<p> do you want to add this contact? </p>
+<!-- <button (click)="addtotable(id.value,fname.value,lname.value,sub.value)">OK</button> -->
+
+
+<button (click)="addtotable(id.value,fname.value,lname.value,sub.value)"
+>OK</button>
+<button (click)="cancelbtn()">CANCEL</button><br>
+</div>

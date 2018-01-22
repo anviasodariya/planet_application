@@ -1,0 +1,17 @@
+.formstyle
+{
+background-image: url("/assets/background.png");
+background-color: black;
+height:600px;
+width:1500px;
+}
+.name
+{
+    margin-left:500px;
+    font-weight: 600;
+    color: orange;
+}
+.btn
+{
+    margin-left:500px;
+}
